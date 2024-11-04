@@ -138,8 +138,8 @@ end)
 
 if Config.VersionCheck then
     Citizen.CreateThread(function()
-        local updatePath = "/Wave-Projects/FiveM_blockVPN"
-        local resourceName = "FiveM_blockVPN (" .. GetCurrentResourceName() .. ")"
+        local updatePath = "/Vectron-Development/vt-blockVPN"
+        local resourceName = "vt-blockVPN (" .. GetCurrentResourceName() .. ")"
         local versionUrl = "https://raw.githubusercontent.com" .. updatePath .. "/master/version"
 
         local function parseVersion(version)
@@ -185,22 +185,22 @@ if Config.VersionCheck then
             local isUpdateAvailable, errorMsg = isVersionNewer(curVersion, responseText)
 
             if errorMsg then
-                print('[^4Wave-Projects^0][^1Error^0] Version check error: ' .. errorMsg)
+                print('[^4Vectron-Development^0][^1Error^0] Version check error: ' .. errorMsg)
             elseif isUpdateAvailable == nil then
-                print('[^4Wave-Projects^0][^1Error^0] Unable to compare versions.')
+                print('[^4Vectron-Development^0][^1Error^0] Unable to compare versions.')
             elseif isUpdateAvailable then
-                print('[^4Wave-Projects^0][^1Error^0] ' ..
+                print('[^4Vectron-Development^0][^1Error^0] ' ..
                     resourceName .. ' is outdated. Consider updating to the latest version.')
-                print('[^4Wave-Projects^0][^1Error^0] Current version: ' .. curVersion)
-                print('[^4Wave-Projects^0][^1Error^0] Latest version: ' .. responseText)
+                print('[^4Vectron-Development^0][^1Error^0] Current version: ' .. curVersion)
+                print('[^4Vectron-Development^0][^1Error^0] Latest version: ' .. responseText)
             elseif not isUpdateAvailable then
                 if curVersion ~= responseText then
-                    print('[^4Wave-Projects^0][^1Error^0] ' ..
+                    print('[^4Vectron-Development^0][^1Error^0] ' ..
                         resourceName .. ' is using a version newer than the latest version available.')
-                    print('[^4Wave-Projects^0][^1Error^0] Current version: ' .. curVersion)
-                    print('[^4Wave-Projects^0][^1Error^0] Latest version: ' .. responseText)
+                    print('[^4Vectron-Development^0][^1Error^0] Current version: ' .. curVersion)
+                    print('[^4Vectron-Development^0][^1Error^0] Latest version: ' .. responseText)
                 else
-                    print("[^4Wave-Projects^0][^2Success^0] " .. resourceName .. " is up to date, have fun!")
+                    print("[^4Vectron-Development^0][^2Success^0] " .. resourceName .. " is up to date, have fun!")
                 end
             end
         end, "GET")
