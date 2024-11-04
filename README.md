@@ -13,7 +13,7 @@ BlockVPN is a resource for FiveM servers that detects and blocks connections fro
 ## Installation
 
 1. Ensure you have the necessary files in your FiveM server's resource folder.
-2. Add `start FiveM_blockVPN` to your server.cfg file.
+2. Add `start vt_blockVPN` to your server.cfg file.
 
 ## Configuration
 
